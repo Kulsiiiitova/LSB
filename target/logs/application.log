@@ -1,7 +1,0 @@
-2024-12-14 20:57:52 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Запуск приложения SteganographyApp.
-2024-12-14 20:57:52 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Главное окно приложения открыто.
-2024-12-14 20:57:59 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Приложение закрыто пользователем.
-2024-12-14 20:58:08 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Запуск приложения SteganographyApp.
-2024-12-14 20:58:08 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Главное окно приложения открыто.
-2024-12-14 20:58:15 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Изображение выбрано: output.bmp
-2024-12-14 20:58:25 [JavaFX Application Thread] INFO  com.example.demo.LogUtil - Приложение закрыто пользователем.
