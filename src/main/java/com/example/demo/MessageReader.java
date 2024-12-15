@@ -23,8 +23,7 @@ public class MessageReader {
 
         // Проверка на пустой путь к файлу
         if (messageFile == null) {
-            LogUtil.logError("Путь к файлу сообщения не может быть пустым.",
-                    new IOException("Путь к файлу сообщения не может быть пустым."));
+            LogUtil.logError("Путь к файлу сообщения не может быть пустым.", new IOException("Путь к файлу сообщения не может быть пустым."));
             throw new IOException("Путь к файлу сообщения не может быть пустым.");
         }
 
@@ -34,8 +33,7 @@ public class MessageReader {
 
         // Проверка существования файла и его корректности
         if (!file.exists() || !file.isFile()) {
-            LogUtil.logError("Файл не найден или не является файлом: " + messageFile,
-                    new IOException("Файл не найден или не является файлом: " + messageFile));
+            LogUtil.logError("Файл не найден или не является файлом: " + messageFile, new IOException("Файл не найден или не является файлом: " + messageFile));
             throw new IOException("Файл не найден или не является файлом: " + messageFile);
         }
 
@@ -54,8 +52,7 @@ public class MessageReader {
 
         // Проверка на пустое содержимое файла
         if (message.isEmpty()) {
-            LogUtil.logError("Файл сообщения пуст.",
-                    new IOException("Файл сообщения пуст."));
+            LogUtil.logError("Файл сообщения пуст.", new IOException("Файл сообщения пуст."));
             throw new IOException("Файл сообщения пуст.");
         }
 

@@ -19,8 +19,7 @@ public class BitConverter {
         LogUtil.logInfo("Преобразование сообщения в биты.");
 
         if (message == null || message.isEmpty()) {
-            LogUtil.logError("Сообщение не должно быть пустым.",
-                    new IOException("Сообщение не должно быть пустым."));
+            LogUtil.logError("Сообщение не должно быть пустым.", new IOException("Сообщение не должно быть пустым."));
             throw new IOException("Сообщение не должно быть пустым.");
         }
 
@@ -29,6 +28,11 @@ public class BitConverter {
         int index = 0;
 
         for (char character : message.toCharArray()) {
+            // Проверяем, что символ укладывается в 8 бит
+            if (character > 255) {
+                LogUtil.logError("Сообщение содержит символы, требующие более 8 бит.", new IOException("Символ " + character + " превышает 8 бит."));
+                throw new IOException("Символ " + character + " превышает 8 бит.");
+            }
             // Преобразуем символ в двоичную строку
             String binaryString = Integer.toBinaryString(character);
 

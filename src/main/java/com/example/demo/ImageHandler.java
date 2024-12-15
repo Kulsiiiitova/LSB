@@ -22,24 +22,21 @@ public class ImageHandler {
         LogUtil.logInfo("Загрузка изображения: " + originalImagePath);
 
         if (originalImagePath == null) {
-            LogUtil.logError("Путь к изображению введен неправильно.",
-                    new IOException("Путь к изображению введен неправильно."));
+            LogUtil.logError("Путь к изображению введен неправильно.", new IOException("Путь к изображению введен неправильно."));
             throw new IOException("Путь к изображению введен неправильно.");
         }
 
         // Проверка существования файла
         File inputFile = new File(originalImagePath);
         if (!inputFile.exists() || !inputFile.isFile()) {
-            LogUtil.logError("Файл не существует или не является файлом: " + originalImagePath,
-                    new IOException("Файл не существует или не является файлом: " + originalImagePath));
+            LogUtil.logError("Файл не существует или не является файлом: " + originalImagePath, new IOException("Файл не существует или не является файлом: " + originalImagePath));
             throw new IOException("Файл не существует или не является файлом: " + originalImagePath);
         }
 
         // Загрузка изображения
         BufferedImage image = ImageIO.read(inputFile);
         if (image == null) {
-            LogUtil.logError("Не удалось загрузить изображение: " + originalImagePath,
-                    new IOException("Не удалось загрузить изображение: " + originalImagePath));
+            LogUtil.logError("Не удалось загрузить изображение: " + originalImagePath, new IOException("Не удалось загрузить изображение: " + originalImagePath));
             throw new IOException("Не удалось загрузить изображение: " + originalImagePath);
         }
 
@@ -50,23 +47,21 @@ public class ImageHandler {
     /**
      * Сохранение изображения в указанный путь.
      *
-     * @param image объект BufferedImage, который нужно сохранить.
+     * @param image      объект BufferedImage, который нужно сохранить.
      * @param outputPath путь, куда будет сохранено изображение.
-     * @param format формат изображения (например, "bmp", "png", "jpg").
+     * @param format     формат изображения (например, "bmp", "png", "jpg").
      * @throws IOException если файл не может быть сохранен.
      */
     public static void saveImage(BufferedImage image, String outputPath, String format) throws IOException {
         LogUtil.logInfo("Сохранение изображения в путь: " + outputPath + ", формат: " + format);
 
         if (image == null) {
-            LogUtil.logError("Изображение не может быть пустым.",
-                    new IOException("Изображение не может быть пустым."));
+            LogUtil.logError("Изображение не может быть пустым.", new IOException("Изображение не может быть пустым."));
             throw new IOException("Изображение не может быть пустым.");
         }
 
         if (outputPath == null) {
-            LogUtil.logError("Путь для сохранения изображения введен неправильно.",
-                    new IOException("Путь для сохранения изображения введен неправильно."));
+            LogUtil.logError("Путь для сохранения изображения введен неправильно.", new IOException("Путь для сохранения изображения введен неправильно."));
             throw new IOException("Путь для сохранения изображения введен неправильно.");
         }
 
@@ -88,8 +83,7 @@ public class ImageHandler {
         LogUtil.logInfo("Создание изображения младших битов.");
 
         if (image == null) {
-            LogUtil.logError("Входное изображение не может быть пустым.",
-                    new IOException("Входное изображение не может быть пустым."));
+            LogUtil.logError("Входное изображение не может быть пустым.", new IOException("Входное изображение не может быть пустым."));
             throw new IOException("Входное изображение не может быть пустым.");
         }
 

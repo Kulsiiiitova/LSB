@@ -89,9 +89,9 @@ public class SteganographyApp extends Application {
     /**
      * Создание макет с элементами интерфейса.
      *
-     * @param selectImageButton кнопка для выбора изображения.
+     * @param selectImageButton   кнопка для выбора изображения.
      * @param selectMessageButton кнопка для выбора текстового файла.
-     * @param embedMessageButton кнопка для встраивания сообщения.
+     * @param embedMessageButton  кнопка для встраивания сообщения.
      * @return объект GridPane с элементами интерфейса.
      */
     private GridPane createLayout(Button selectImageButton, Button selectMessageButton, Button embedMessageButton) {
@@ -119,10 +119,10 @@ public class SteganographyApp extends Application {
     /**
      * Настройка действия кнопок.
      *
-     * @param primaryStage главный этап приложения.
-     * @param selectImageButton кнопка для выбора изображения.
+     * @param primaryStage        главный этап приложения.
+     * @param selectImageButton   кнопка для выбора изображения.
      * @param selectMessageButton кнопка для выбора текстового файла.
-     * @param embedMessageButton кнопка для встраивания сообщения.
+     * @param embedMessageButton  кнопка для встраивания сообщения.
      */
     private void configureButtons(Stage primaryStage, Button selectImageButton, Button selectMessageButton, Button embedMessageButton) {
         selectImageButton.setOnAction(e -> handleSelectImage(primaryStage));
